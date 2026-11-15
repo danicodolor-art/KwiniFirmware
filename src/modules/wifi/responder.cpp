@@ -574,7 +574,7 @@ void responder() {
     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
     if (!wifiConnected) wifiConnectMenu();
 
-    netbiosname_str = keyboard("Bruce", 20);
+    netbiosname_str = keyboard("KwiniFirmware", 20);
     if (netbiosname_str == "\x1B") return;
     netbiosName = stringTochar(netbiosname_str);
     netbiosdomain_str = keyboard("BRUCEGROUP", 20);

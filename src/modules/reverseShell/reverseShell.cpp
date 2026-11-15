@@ -88,7 +88,7 @@ void ReverseShell() {
     }
 
     // ── AP Password: bruce ─────────────────────────────────────
-    if (!WiFi.softAP("BruceShell", "bruce")) {
+    if (!WiFi.softAP("BruceShell", "kwini")) {
         tft.println("Failed to start AP");
         return;
     }

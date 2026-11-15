@@ -28,7 +28,7 @@ public:
 };
 
 void BLE_API::setup() {
-    NimBLEDevice::init("Bruce");
+    NimBLEDevice::init("KwiniFirmware");
     NimBLEDevice::setPower(ESP_PWR_LVL_P9); // 9 dBm, tweak if you want
 
     // Ask for the largest standard ATT MTU. The central still decides the final
@@ -60,7 +60,7 @@ void BLE_API::setup() {
     // This keeps the NUS service UUID discoverable, letting the companion app
     // filter on it during scanning.
     pAdvertising->enableScanResponse(true);
-    pAdvertising->setName("Bruce");
+    pAdvertising->setName("KwiniFirmware");
     pAdvertising->start();
 }
 

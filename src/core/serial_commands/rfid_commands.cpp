@@ -263,7 +263,7 @@ uint32_t rfidNdefCallback(cmd *c) {
         value += cmd.getArgument(i).getValue();
     }
     type.toLowerCase();
-    if (value.length() == 0) value = (type == "text") ? "Bruce" : "https://bruce.computer";
+    if (value.length() == 0) value = (type == "text") ? "KwiniFirmware" : "https://bruce.computer";
 
     if (!_ensureRfid()) return false;
 
@@ -389,7 +389,7 @@ void createRfidCommands(SimpleCLI *cli) {
     cmd.addCommand("info", rfidInfoCallback);
     Command saveCmd = cmd.addCommand("save", rfidSaveCallback);
     saveCmd.addPosArg("filename", "rfid_dump");
-    saveCmd.addPosArg("format", "bruce");
+    saveCmd.addPosArg("format", "kwini");
     Command loadFileCmd = cmd.addCommand("loadfile", rfidLoadFileCallback);
     loadFileCmd.addPosArg("filepath", "/BruceRFID/rfid_dump.rfid");
     cmd.addBoundlessCommand("ndef", rfidNdefCallback);
